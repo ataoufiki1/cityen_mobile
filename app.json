@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "cityen_mobile",
-    "slug": "cityen_mobile",
+    "name": "threads-app",
+    "slug": "threads-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
