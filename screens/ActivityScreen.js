@@ -43,7 +43,7 @@ const ActivityScreen = () => {
   return (
     <ScrollView style={{ marginTop: 50 }}>
       <View style={{ padding: 10 }}>
-        <Text style={{ fontSize: 18, fontWeight: "bold" }}>Activity</Text>
+        <Text style={{ fontSize: 18, fontWeight: "bold" }}>Activité</Text>
 
         <View
           style={{
@@ -76,7 +76,7 @@ const ActivityScreen = () => {
                   : { color: "black" },
               ]}
             >
-              People
+              Personnes
             </Text>
           </TouchableOpacity>
 
@@ -103,7 +103,7 @@ const ActivityScreen = () => {
                   : { color: "black" },
               ]}
             >
-              All
+              Tous
             </Text>
           </TouchableOpacity>
 
@@ -132,7 +132,7 @@ const ActivityScreen = () => {
                   : { color: "black" },
               ]}
             >
-              Requests
+              Demandes
             </Text>
           </TouchableOpacity>
         </View>

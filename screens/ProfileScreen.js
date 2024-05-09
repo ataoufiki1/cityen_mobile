@@ -47,7 +47,7 @@ const ProfileScreen = () => {
               backgroundColor: "#D0D0D0",
             }}
           >
-            <Text>Threads.net</Text>
+            <Text></Text>
           </View>
         </View>
 
@@ -74,17 +74,17 @@ const ProfileScreen = () => {
           </View>
 
           <View>
-            <Text style={{ fontSize: 15, fontWeight: "400" }}>BTech.</Text>
+            <Text style={{ fontSize: 15, fontWeight: "400" }}>Développeur</Text>
             <Text style={{ fontSize: 15, fontWeight: "400" }}>
-              Movie Buff | Musical Nerd
+            Passionné de cinéma  | Passionné de jeux vidéo
             </Text>
             <Text style={{ fontSize: 15, fontWeight: "400" }}>
-              Love Yourself
+            Apprends à t'aimer
             </Text>
           </View>
         </View>
         <Text style={{ color: "gray", fontSize: 15, marginTop: 10 }}>
-          {user?.followers?.length} followers
+          {user?.followers?.length} amis
         </Text>
         <View style={{flexDirection:"row",alignItems:"center",gap:10,marginTop:20}}>
           <Pressable
@@ -98,7 +98,7 @@ const ProfileScreen = () => {
               borderRadius: 5,
             }}
           >
-            <Text>Edit Profile</Text>
+            <Text>Modifier le profil</Text>
           </Pressable>
 
           <Pressable
@@ -113,7 +113,7 @@ const ProfileScreen = () => {
               borderRadius: 5,
             }}
           >
-            <Text>Logout</Text>
+            <Text>Déconnexion</Text>
           </Pressable>
         </View>
       </View>

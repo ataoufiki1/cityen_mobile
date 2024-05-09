@@ -122,11 +122,11 @@ app.post("/login", async (req, res) => {
 
     const user = await User.findOne({ email });
     if (!user) {
-      return res.status(404).json({ message: "Invalid email" });
+      return res.status(404).json({ message: "Email invalide" });
     }
 
     if (user.password !== password) {
-      return res.status(404).json({ message: "Invalid password" });
+      return res.status(404).json({ message: "Mot de passeinvalide" });
     }
 
     const token = jwt.sign({ userId: user._id }, secretKey);
@@ -167,7 +167,7 @@ app.post("/follow", async (req, res) => {
     res.sendStatus(200);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ message: "error in following a user" });
+    res.status(500).json({ message: "erreur en suivant un utilisateur" });
   }
 });
 
@@ -180,9 +180,9 @@ app.post("/users/unfollow", async (req, res) => {
       $pull: { followers: loggedInUserId },
     });
 
-    res.status(200).json({ message: "Unfollowed successfully" });
+    res.status(200).json({ message: "N'est plus ami avec succès" });
   } catch (error) {
-    res.status(500).json({ message: "Error unfollowing user" });
+    res.status(500).json({ message: "Erreur lors de l'annulation de l'ami." });
   }
 });
 
@@ -203,9 +203,9 @@ app.post("/create-post", async (req, res) => {
 
     await newPost.save();
 
-    res.status(200).json({ message: "Post saved successfully" });
+    res.status(200).json({ message: "Publication enregistrée avec succès" });
   } catch (error) {
-    res.status(500).json({ message: "post creation failed" });
+    res.status(500).json({ message: "échec de la création de la publication" });
   }
 });
 
@@ -224,7 +224,7 @@ app.put("/posts/:postId/:userId/like", async (req, res) => {
     );
 
     if (!updatedPost) {
-      return res.status(404).json({ message: "Post not found" });
+      return res.status(404).json({ message: "Publication non trouvée" });
     }
     updatedPost.user = post.user;
 
@@ -233,7 +233,7 @@ app.put("/posts/:postId/:userId/like", async (req, res) => {
     console.error("Error liking post:", error);
     res
       .status(500)
-      .json({ message: "An error occurred while liking the post" });
+      .json({ message: "Erreur lors de la mise en j'aime de la publication" });
   }
 });
 
@@ -254,15 +254,15 @@ app.put("/posts/:postId/:userId/unlike", async (req, res) => {
     updatedPost.user = post.user;
 
     if (!updatedPost) {
-      return res.status(404).json({ message: "Post not found" });
+      return res.status(404).json({ message: "Publication non trouvée" });
     }
 
     res.json(updatedPost);
   } catch (error) {
-    console.error("Error unliking post:", error);
+    console.error("Erreur lors de la suppression du j'aime de la publication.:", error);
     res
       .status(500)
-      .json({ message: "An error occurred while unliking the post" });
+      .json({ message: "Une erreur est survenue lors de la mise en j'aime de la publication." });
   }
 });
 
@@ -277,7 +277,7 @@ app.get("/get-posts", async (req, res) => {
   } catch (error) {
     res
       .status(500)
-      .json({ message: "An error occurred while getting the posts" });
+      .json({ message: "Une erreur s'est produite lors de la récupération des publications." });
   }
 });
 
@@ -288,11 +288,11 @@ app.get("/profile/:userId", async (req, res) => {
     const user = await User.findById(userId);
 
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({ message: "Utilisateur non trouvé." });
     }
 
     return res.status(200).json({ user });
   } catch (error) {
-    res.status(500).json({ message: "Error while getting the profile" });
+    res.status(500).json({ message: "Erreur lors de la récupération du profil." });
   }
 });

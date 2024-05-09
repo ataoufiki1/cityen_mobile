@@ -29,7 +29,7 @@ const ThreadsScreen = () => {
         setContent("");
       })
       .catch((error) => {
-        console.log("error creating post", error);
+        console.log("Erreur lors de la création de la publication", error);
       });
   };
   return (
@@ -54,7 +54,7 @@ const ThreadsScreen = () => {
           }}
         />
 
-        <Text>Sujan_Music</Text>
+        <Text>Music</Text>
       </View>
 
       <View style={{ flexDirection: "row", marginLeft: 10 }}>
@@ -62,14 +62,14 @@ const ThreadsScreen = () => {
           value={content}
           onChangeText={(text) => setContent(text)}
           placeholderTextColor={"black"}
-          placeholder="Type your message..."
+          placeholder="Entrez votre message..."
           multiline
         />
       </View>
 
       <View style={{ marginTop: 20 }} />
 
-      <Button onPress={handlePostSubmit} title="Share Post" />
+      <Button onPress={handlePostSubmit} title="Partager la publication" />
     </SafeAreaView>
   );
 };

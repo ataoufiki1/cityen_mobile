@@ -55,7 +55,7 @@ const HomeScreen = () => {
 
       setPosts(updatedPosts);
     } catch (error) {
-      console.log("Error liking the post", error);
+      console.log("Erreur lors de la mise en j'aime de la publication.", error);
     }
   };
 
@@ -73,7 +73,7 @@ const HomeScreen = () => {
     
       setPosts(updatedPosts);
     } catch (error) {
-      console.error("Error unliking post:", error);
+      console.error("Erreur lors de la suppression du j'aime de la publication:", error);
     }
   };
   return (
@@ -82,7 +82,7 @@ const HomeScreen = () => {
         <Image
           style={{ width: 60, height: 40, resizeMode: "contain" }}
           source={{
-            uri: "https://freelogopng.com/images/all_img/1688663386threads-logo-transparent.png",
+            uri: "",
           }}
         />
       </View>

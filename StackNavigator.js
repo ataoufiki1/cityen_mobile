@@ -23,7 +23,7 @@ const StackNavigator = () => {
           name="Home"
           component={HomeScreen}
           options={{
-            tabBarLabel: "Home",
+            tabBarLabel: "Accueil",
             tabBarLabelStyle: { color: "black" },
             headerShown: false,
             tabBarIcon: ({ focused }) =>
@@ -39,7 +39,7 @@ const StackNavigator = () => {
           name="Thread"
           component={ThreadsScreen}
           options={{
-            tabBarLabel: "Create",
+            tabBarLabel: "créer",
             tabBarLabelStyle: { color: "black" },
             headerShown: false,
             tabBarIcon: ({ focused }) =>
@@ -55,7 +55,7 @@ const StackNavigator = () => {
           name="Activity"
           component={ActivityScreen}
           options={{
-            tabBarLabel: "Activity",
+            tabBarLabel: "Activité",
             tabBarLabelStyle: { color: "black" },
             headerShown: false,
             tabBarIcon: ({ focused }) =>

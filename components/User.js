@@ -83,7 +83,7 @@ const User = ({ item }) => {
             <Text
               style={{ textAlign: "center", fontSize: 15, fontWeight: "bold" }}
             >
-              Following
+              Amis
             </Text>
           </Pressable>
         ) : (
@@ -101,7 +101,7 @@ const User = ({ item }) => {
             <Text
               style={{ textAlign: "center", fontSize: 15, fontWeight: "bold" }}
             >
-              Follow
+             Demande d'amitié
             </Text>
           </Pressable>
         )}

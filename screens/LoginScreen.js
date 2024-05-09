@@ -52,8 +52,8 @@ const LoginScreen = () => {
         navigation.navigate("Main");
       })
       .catch((error) => {
-        Alert.alert("Login error");
-        console.log("error ", error);
+        Alert.alert("Erreur de connexion");
+        console.log("Erreur ", error);
       });
   };
   return (
@@ -64,7 +64,7 @@ const LoginScreen = () => {
         <Image
           style={{ width: 150, height: 100, resizeMode: "contain" }}
           source={{
-            uri: "https://freelogopng.com/images/all_img/1688663386threads-logo-transparent.png",
+            uri: "",
           }}
         />
       </View>
@@ -72,7 +72,7 @@ const LoginScreen = () => {
       <KeyboardAvoidingView>
         <View style={{ alignItems: "center", justifyContent: "center" }}>
           <Text style={{ fontSize: 17, fontWeight: "bold", marginTop: 25 }}>
-            Login to Your Account
+          Connectez-vous à votre compte
           </Text>
         </View>
 
@@ -104,7 +104,7 @@ const LoginScreen = () => {
                 width: 300,
                 fontSize: email ? 16 : 16,
               }}
-              placeholder="enter your Email"
+              placeholder="Entrez votre adresse e-mail"
             />
           </View>
 
@@ -137,7 +137,7 @@ const LoginScreen = () => {
                   width: 300,
                   fontSize: password ? 16 : 16,
                 }}
-                placeholder="enter your Password"
+                placeholder="Entrez votre Mot de passe"
               />
             </View>
           </View>
@@ -150,9 +150,9 @@ const LoginScreen = () => {
               marginTop: 12,
             }}
           >
-            <Text>Keep me logged in</Text>
+            <Text>Rester connecté</Text>
             <Text style={{ fontWeight: "500", color: "#007FFF" }}>
-              Forgot Password
+            Mot de passe oublié
             </Text>
           </View>
         </View>
@@ -179,7 +179,7 @@ const LoginScreen = () => {
               color: "white",
             }}
           >
-            Login
+            Connexion
           </Text>
         </Pressable>
 
@@ -188,7 +188,7 @@ const LoginScreen = () => {
           style={{ marginTop: 10 }}
         >
           <Text style={{ textAlign: "center", fontSize: 16 }}>
-            Don't have an account? Sign up
+          Vous n'avez pas de compte ? Inscrivez-vous
           </Text>
         </Pressable>
       </KeyboardAvoidingView>

@@ -32,8 +32,8 @@ import {
         .then((response) => {
           console.log(response);
           Alert.alert(
-            "Registration successful",
-            "you have been registered successfully"
+            "Inscription réussie",
+            "Vous avez été inscrit avec succès"
           );
           setName("");
           setEmail("");
@@ -41,8 +41,8 @@ import {
         })
         .catch((error) => {
           Alert.alert(
-            "Registration failed",
-            "An error occurred during registrationnnnnn"
+            "Inscription échouée",
+            "Une erreur est survenue lors de l'inscription"
           );
           console.log("error", error);
         });
@@ -55,7 +55,7 @@ import {
           <Image
             style={{ width: 150, height: 100, resizeMode: "contain" }}
             source={{
-              uri: "https://freelogopng.com/images/all_img/1688663386threads-logo-transparent.png",
+              uri: "",
             }}
           />
         </View>
@@ -95,7 +95,7 @@ import {
                   width: 300,
                   fontSize: password ? 16 : 16,
                 }}
-                placeholder="enter your Name"
+                placeholder="Entrez votre nom"
               />
             </View>
           </View>
@@ -128,7 +128,7 @@ import {
                   width: 300,
                   fontSize: email ? 16 : 16,
                 }}
-                placeholder="enter your Email"
+                placeholder="Entrez votre Email"
               />
             </View>
   
@@ -161,7 +161,7 @@ import {
                     width: 300,
                     fontSize: password ? 16 : 16,
                   }}
-                  placeholder="enter your Password"
+                  placeholder="Entrez votre Mot de passe"
                 />
               </View>
             </View>
